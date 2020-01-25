@@ -1,0 +1,20 @@
+
+version: '2'
+
+services:
+    database:
+        image: mongo:3.3
+
+    dashboard:
+#        image:  nhsuk/pa11y-dashboard:latest
+        image: registry.wklive.net:5000/dg/pa11y-dashboard:latest
+#        image: slackerony/pa11y-dashboard
+        ports:
+            - 4000:4000
+            - 3000:3000
+        environment:
+            WEBSERVICE_DATABASE: mongodb://database/pa11y
+        links:
+            - database
+        cap_add:
+            - SYS_ADMIN
