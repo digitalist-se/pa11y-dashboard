@@ -5,7 +5,11 @@ services:
     database:
         image: mongo:3.3
     dashboard:
-        image: ozziio/pa11y-dashboard
+# if using pre built image, comment out image
+#        image: ozziio/pa11y-dashboard
+# comment out build if you want to use pre built image
+        build:
+          context: .
         ports:
             - 4000:4000
             - 3000:3000
