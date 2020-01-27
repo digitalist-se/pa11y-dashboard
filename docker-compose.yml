@@ -1,14 +1,11 @@
 
-version: '2'
+version: '3'
 
 services:
     database:
         image: mongo:3.3
-
     dashboard:
-#        image:  nhsuk/pa11y-dashboard:latest
-        image: registry.wklive.net:5000/dg/pa11y-dashboard:latest
-#        image: slackerony/pa11y-dashboard
+        image: ozziio/pa11y-dashboard
         ports:
             - 4000:4000
             - 3000:3000
