@@ -12,6 +12,15 @@ Pa11y Dashboard is a web interface to the [Pa11y][pa11y] accessibility reporter;
 
 ---
 
+## Docker
+
+Simplest way to run pa11y dashboard localy.
+
+```bash
+docker-compose up
+```
+
+
 ## Requirements
 
 Pa11y Dashboard is a [Node.js][node] application and requires a stable or LTS version of Node, currently version 8 or greater.
